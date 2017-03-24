@@ -112,6 +112,7 @@ module.exports = {
           // https://github.com/facebookincubator/create-react-app/issues/1713
           /\.(js|jsx)(\?.*)?$/,
           /\.css$/,
+          /\.scss$/,
           /\.json$/,
           /\.svg$/
         ],
@@ -127,7 +128,7 @@ module.exports = {
         include: paths.appSrc,
         loader: 'babel',
         query: {
-          
+
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
@@ -139,10 +140,14 @@ module.exports = {
       // "style" loader turns CSS into JS modules that inject <style> tags.
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
-      {
-        test: /\.css$/,
-        loader: 'style!css?importLoaders=1!postcss'
-      },
+        {
+            test: /\.css$/,
+            loader: 'style!css?importLoaders=1!postcss'
+        },
+        {
+            test: /\.scss$/,
+            loader: 'style!css!sass'
+        },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
       {

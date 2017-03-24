@@ -49,11 +49,7 @@ class App extends Component {
       <Container>
         <Row>
           <Col md={{size: 8, offset: 2}}>
-            <Explore value={inputValue}
-                     onChange={this.handleChange} />
-            <InputText type="text" label="Testtttt" placeholder="Test"/>
-            <hr />
-            {this.renderErrorMessage()}
+            <h1>VQuizLite</h1>
             {children}
           </Col>
         </Row>

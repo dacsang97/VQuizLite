@@ -7,6 +7,7 @@ import configureStore from './store/configureStore'
 
 // Import stylesheet
 import 'bootstrap/dist/css/bootstrap.css';
+import 'simple-line-icons/scss/simple-line-icons.scss';
 import './assets/scss/index.scss';
 
 const store = configureStore()
