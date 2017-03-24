@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
 import Explore from '../components/Explore'
 import { resetErrorMessage } from '../actions'
+import { InputText } from '../components';
+import { Container, Col, Row } from 'reactstrap';
 
 class App extends Component {
   static propTypes = {
@@ -44,13 +46,18 @@ class App extends Component {
   render() {
     const { children, inputValue } = this.props
     return (
-      <div>
-        <Explore value={inputValue}
-                 onChange={this.handleChange} />
-        <hr />
-        {this.renderErrorMessage()}
-        {children}
-      </div>
+      <Container>
+        <Row>
+          <Col md={{size: 8, offset: 2}}>
+            <Explore value={inputValue}
+                     onChange={this.handleChange} />
+            <InputText type="text" label="Testtttt" placeholder="Test"/>
+            <hr />
+            {this.renderErrorMessage()}
+            {children}
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/webstorm,node,windows,code
 
+#Custom File
+src/constants/env.js
+
 ### Code ###
 # Visual Studio Code - https://code.visualstudio.com/
 .settings/
