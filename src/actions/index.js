@@ -8,7 +8,9 @@ export function getSet(setId) {
       dispatch({
           type: GET_QUIZ,
           AWAIT_MARKER,
-          payload: QuizApi.getSet(setId)
-      })
+          payload: {
+              loadedQuiz: QuizApi.getSet(setId),
+          }
+      });
   }
 }

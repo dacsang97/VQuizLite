@@ -56,7 +56,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "core-decorators": "^0.15.0",
     "humps": "^1.1.0",
-    "lodash": "^4.16.1",
+    "lodash": "^4.17.4",
     "normalizr": "3.0.0",
     "react": "^15.3.0",
     "react-addons-css-transition-group": "^15.4.2",
@@ -72,6 +72,7 @@
     "redux": "^3.5.2",
     "redux-await": "^5.0.1",
     "redux-thunk": "^2.1.0",
+    "seamless-immutable": "^7.1.1",
     "simple-line-icons": "^2.4.1"
   },
   "scripts": {
